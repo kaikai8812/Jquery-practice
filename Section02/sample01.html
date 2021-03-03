@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("p.test")
+          .css("color", "red")
+          .css({
+            "background-color": "green",
+            color: "blue",
+            padding: "20px",
+            "text-align": "center",
+          })
+          .text("おはようございます。");
+      });
+      $(function () {
+        $("p#click")
+          .on("click dblclick", function () {
+            $(this).css({ "background-color": "red", color: "white" });
+          })
+          .off("click");
+      });
+    </script>
+
+    <style type="text/css">
+      p#click {
+        font-size: 1.2em;
+        color: black;
+        background-color: grey;
+        padding: 10px;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="click">クリックすると、変化</p>
+    <!-- <p class="test">こちらは、クラス"test"つきです</p> -->
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+	
+<script>
+	$(function(){
+		$("p:not(:first)").hide();
+		$(".title").on("click",function(){
+			//パネルを全部閉じる
+			$("p").slideUp(500);
+			//選択したパネルだけ表示する
+			$("+p", this).slideDown(500);
+		})
+	});
+
+</script>
+	
+<style type="text/css">
+	.panel {
+		width: 500px;
+	}
+	.panel > .title {
+		width: 500px;
+		height: 20px;
+		background-color: brown;
+		color: white;
+		font-weight: bold;
+		margin-top: 5px;
+		padding: 7px;
+		cursor: pointer;
+	}
+	.panel > p {
+		width: 500px;
+		height: auto;
+		margin: 5px 0 20px 0;
+		padding: 7px;
+		background-color: aqua;
+	}
+</style>
+
+</head>
+	
+<body>
+	<div class="panel">
+		<div class="title">シジュウカラ</div>
+		<p>全長は約14.5cm(13–16.5 cm) で、スズメぐらいの大きさ。翼開長は約22 cm。体重は11-20g。種小名 minor は「小さな」の意だが、シジュウカラ科の中では大型種である。</p>
+	</div>
+	<div class="panel">
+		<div class="title">メジロ</div>
+		<p>全長約12 cmで、スズメよりも小さい。翼開長は約18 cm。緑がかった背と暗褐色の羽を持ち、雌雄同色。目の周りの白い輪が特徴であり、名前の由来ともなっている</p>
+	</div>
+	<div class="panel">
+		<div class="title">モズ</div>
+		<p>日本、中国東部から南部、朝鮮半島、ロシア南東部（樺太南部含む）に分布している。模式標本（L. b. bucephalus　亜種モズ）の産地（模式産地）は日本。日本の北海道、本州、四国、九州に分布している。</p>
+	</div>
+</body>
+</html>

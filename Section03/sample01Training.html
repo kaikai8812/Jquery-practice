@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	
+	<script>
+		$(function(){
+			$("p.test").css( "color", "red" );
+			$("p#child").css( {"color": "blue" ,  "background-color": "#ccc", "padding":"10px" })
+				.text("p#chldの中の文字列を書き換えました。")
+				.remove();
+		});
+	</script>
+	
+	<style type="text/css">
+		p {
+			font-size: 1.2em;
+			color: black;
+			background-color: white;
+		}
+	</style>
+
+</head>
+	
+<body>
+	<p>この文字列をjQueryを使って変化させます。
+		<p id="child">こちらはpの子要素id="child"です。</p>
+	</p>
+	<p class="test">こちらはクラス"test"のp要素です。</p>	
+</body>
+</html>

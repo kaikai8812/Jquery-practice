@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
+    <script>
+      // $(function(){
+      //   $(".title").on("click", function(){
+      //     $("p").toggle("slow");
+      //   })
+      // })
+
+      $(function () {
+        $("p").hide();
+        $(".panel > .title").on("click", function(){
+          $(".panel > p ").slideUp(500);
+          $("+p", this).slideDown(500);
+        })
+      });
+    </script>
+
+    <style type="text/css">
+      .panel {
+        width: 500px;
+      }
+      .panel > .title {
+        width: 500px;
+        height: 20px;
+        background-color: brown;
+        color: white;
+        cursor: pointer;
+        padding: 7px;
+        font-weight: bold;
+      }
+      .panel > p {
+        width: 500px;
+        margin: 7px 0 20px 0;
+        padding: 7px;
+        background-color: aqua;
+        /* display: none; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="panel">
+      <div class="title">Title01</div>
+      <p>テキスト内容1</p>
+    </div>
+    <div class="panel">
+      <div class="title">Title02</div>
+      <p>テキスト内容2</p>
+    </div>
+    <div class="panel">
+      <div class="title">Title03</div>
+      <p>テキスト内容3</p>
+    </div>
+  </body>
+</html>
